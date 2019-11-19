@@ -1,0 +1,193 @@
+% Poster for the Portrait.      
+% BMA   
+% attached README.md file for the details how to compile with `pdflatex`.     
+% $LastChangedDate:: 2019-11-19 
+
+\documentclass[a0paper,portrait]{baposter}
+
+\usepackage{relsize}		% For \smaller
+\usepackage{url}			% For \url
+\usepackage{epstopdf}	% Included EPS files automatically converted to PDF to include with pdflatex
+\usepackage{color}
+
+
+
+
+
+
+%%% Global Settings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\graphicspath{{fig/}}	% Root directory of the pictures 
+\tracingstats=2			% Enabled LaTeX logging with conditionals
+
+%%% Color Definitions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\definecolor{bordercol}{RGB}{40,40,40}
+\definecolor{headercol1}{RGB}{186,215,230}
+\definecolor{headercol2}{RGB}{80,80,80}
+\definecolor{headerfontcol}{RGB}{0,0,0}
+\definecolor{boxcolor}{RGB}{186,215,230}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Utility functions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Save space in lists. Use this after the opening of the list %%%%%%%%%%%%%%%%
+\newcommand{\compresslist}{
+	\setlength{\itemsep}{1pt}
+	\setlength{\parskip}{0pt}
+	\setlength{\parsep}{0pt}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Document Start %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\typeout{Poster rendering started}
+
+%%% Setting Background Image %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\background{
+	\begin{tikzpicture}[remember picture,overlay]%
+	\draw (current page.north west)+(-2em,2em) node[anchor=north west]
+	{\includegraphics[height=1.1\textheight]{background}};
+	\end{tikzpicture}
+}
+
+%%% General Poster Settings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% Eye Catcher, Title, Authors and University Images %%%%%%%%%%%%%%%%%%%%%%
+\begin{poster}{
+	grid=false,
+	% Option is left on true though the eyecatcher is not used. The reason is
+	% that we have a bit nicer looking title and author formatting in the headercol
+	% this way
+	%eyecatcher=false, 
+	borderColor=bordercol,
+	headerColorOne=headercol1,
+	headerColorTwo=headercol2,
+	headerFontColor=headerfontcol,
+	% Only simple background color used, no shading, so boxColorTwo isn't necessary
+	boxColorOne=boxcolor,
+	headershape=roundedright,
+	headerfont=\Large\sf\bf,
+	textborder=rectangle,
+	background=user,
+	headerborder=open,
+  boxshade=plain
+}
+%%% Eye Cacther %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{
+	Eye Catcher, empty if option eyecatcher=false - unused
+}
+%%% Title %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\LARGE
+\vspace{-0.2em}
+	\textbf{XXX} %add Title here
+}
+%%% Authors %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{
+	\vspace{.3em} XXX$^1$, XXX$^1$, XXX$^{1,2}$, XXX$^3$\\ %add author here
+	{\small 1. XXX
+	 \small 2. XXX\\
+	 \small 3. XXX % add company here
+}
+}
+%%% Logo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{
+% The logos are compressed a bit into a simple box to make them smaller on the result
+% (Wasn't able to find any bigger of them.)
+\setlength\fboxsep{1pt}
+\setlength\fboxrule{1pt}
+	\fbox{
+		\begin{minipage}{14em}
+			\includegraphics[width=14em,height=10em,keepaspectratio]{XXX.png} %the width should the same as the minipage, add logo
+		\end{minipage}
+	}
+ }
+
+\headerbox{xxx }{name=introduction,column=0,row=0}{ % add first small title
+
+\includegraphics[width=\linewidth]{xxx} %add first fig
+
+\vspace{0.5em}
+
+XXX % add contexts
+
+}
+
+\headerbox{xxx}{name=MCS,column=0,below=introduction}{ %add 2nd small title
+
+
+XXX % add contexts
+}
+
+\headerbox{xxx}{name=flow,column=0,below=MCS}{ %add 3rd small title
+
+\includegraphics[width=\linewidth]{xxx } %add fig
+
+\vspace{0.5em}
+
+XXX % add contexts  
+
+
+
+}
+
+
+
+\headerbox{Reference}{name=references,column=0,below=flow, above=bottom}{
+\smaller													% Make the whole text smaller
+										% Save some space at the beginning
+\bibliographystyle{plain}							% Use plain style
+\renewcommand{\section}[2]{\vskip 0.05em}		% Omit "References" title
+\begin{thebibliography}{1}							% Simple bibliography with widest label of 1
+	\itemsep=-0.01em										% Save space between the separation
+	\setlength{\baselineskip}{0.4em}					% Save space with longer lines
+	\bibitem{a} Lay et al.: \emph{The 1 April 2014 Iquique, Chile, Mw 8.1 Earthquake Rupture Sequence}. Geophysical Research Letters, 2014.
+	\bibitem{b} Hayes et al.: \emph{Continuing megathrust earthquake potential in Chile after the 2014 Iquique earthquake}. Nature, 2014.
+	\bibitem{c} Ruiz et al.: \emph{Intense foreshocks and a slow slip event preceded the 2014 Iquique Mw 8.1 earthquake}. Science, 2014.
+\end{thebibliography}
+
+} 
+
+\headerbox{xxx} {name=line04,span=2,column=1,row=0}{ %add 4th small title 
+
+XXX % add contexts
+\includegraphics[width=\linewidth]{fig1-01.png} %add fig
+
+
+
+}
+
+\headerbox{xxx} %add 4th small title 
+{name=degreeDistribution,span=2,column=1,below=line04}{
+
+XXX % add contexts
+\includegraphics[width=\linewidth]{stk} %add fig
+
+
+
+
+
+}
+
+
+\headerbox{Limitation}{name=limitation,column=1,span=2,below=degreeDistribution,}{
+
+
+XXX % add contexts
+
+}
+
+\headerbox{Result}{name=result,column=1,span=2,below=limitation,above=bottom}{
+
+XXX % add contexts
+
+
+\textbf{Next step}: XXX % add contexts
+
+
+}
+
+
+\end{poster}
+\end{document}

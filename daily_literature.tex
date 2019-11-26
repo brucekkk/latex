@@ -1,234 +1,102 @@
-\documentclass{article}
+\documentclass[12pt]{article}
+\usepackage[top=0.5cm,bottom=1.4cm,left=1.0cm,right=0.2cm]{geometry}
+\usepackage{mathptmx}%
+\usepackage{longtable}
+\usepackage{array,ragged2e}
 \usepackage[table]{xcolor}
 \usepackage{caption}
-\usepackage{array,ragged2e}
-%\usepackage{longtable}
-\usepackage[margin=1in]{geometry}
-\usepackage{tabularx}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \usepackage{enumitem}
-\setlist{nolistsep}
-\definecolor{green}{HTML}{66FF66}
-\definecolor{myGreen}{HTML}{009900}
-\renewcommand{\familydefault}{\sfdefault}
-\renewcommand{\arraystretch}{1.5}
+\setlist[enumerate]{itemsep=0mm}
 \begin{document}
 \listoftables
 \clearpage
-
+\begin{longtable}{ C{3cm} | L{16cm} }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}
-\caption{Title}
-\centering
-\begin{tabularx}{\textwidth}[t]{XX}
+\caption{Asperities and barriers on the seismogenic zone in North Chile: state-of-the-art after the 2007 Mw 7.7 Tocopilla earthquake inferred by GPS and InSAR data}\\ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\hline
+\hline
+\multicolumn{2}{l}{\textbf{0 Summary}} \\
+\hline
+\hline 
+%\textbf{\textit{Aspects}} & \textbf{\textit{Content}} \\
+%\hline 
+%\hline
+\textit{keyword} & 2007 Tocopilla earthquake\\&111\\ %keyword here
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\arrayrulecolor{green}\hline
-\textbf{\textcolor{myGreen}{0 Summary}} & \\
-\hline
-\begin{description}
-  \item [Personal idea]
-  \item write content here %write content here 
-\end{description}
-&
-\begin{minipage}[t]{\linewidth}%
-\begin{description}
-  \item [Key words]
-  \item write content here %write content here 
-\end{description}
-\end{minipage}\\
-\arrayrulecolor{black}\hline
-\begin{description}
-  \item [Personal idea]
-  \item write content here %write content here 
-\end{description}
-&
-\begin{minipage}[t]{\linewidth}%
-\begin{itemize}
-\item[1.1] write content here %write content here 
-\item[1.2] write content here %write content here 
-\item[1.3] write content here %write content here 
-\end{itemize}
-\end{minipage}\\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\arrayrulecolor{green}\hline
-\textbf{\textcolor{myGreen}{1 Research Objective}} \\
-\hline
-\begin{description}
-  \item [Personal idea]
-  \item write content here %write content here 
-\end{description}
-&
-\begin{minipage}[t]{\linewidth}%
-\begin{itemize}
-\item[1.1] write content here %write content here 
-\item[1.2] write content here %write content here 
-\item[1.3] write content here %write content here 
-\end{itemize}
-\end{minipage}\\
-\hline
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\arrayrulecolor{green}\hline
-\textbf{\textcolor{myGreen}{2 Background and Problems}} \\
-\hline
-\begin{description}
-  \item [Personal idea]
-  \item write content here %write content here 
-\end{description}
-&
-\begin{minipage}[t]{\linewidth}%
-\begin{itemize}
-\item[1.1] write content here %write content here 
-\item[1.2] write content here %write content here 
-\item[1.3] write content here %write content here 
-\end{itemize}
-\end{minipage}\\
-\hline
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\arrayrulecolor{green}\hline
-\textbf{\textcolor{myGreen}{3 Method}} \\
-\hline
-\begin{description}
-  \item [Personal idea]
-  \item write content here %write content here 
-\end{description}
-&
-\begin{minipage}[t]{\linewidth}%
-\begin{itemize}
-\item[1.1] write content here %write content here 
-\item[1.2] write content here %write content here 
-\item[1.3] write content here %write content here 
-\end{itemize}
-\end{minipage}\\
-\hline
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\multicolumn{2}{c}{%
-\textbf{\textcolor{red}{Conclusion}}} \\
-\hline
-\begin{description}
-  \item [Personal idea]
-  \item write content here %write content here 
-\end{description}
-&
-\begin{minipage}[t]{\linewidth}%
-\begin{itemize}
-\item[1.1] write content here %write content here 
-\item[1.2] write content here %write content here 
-\item[1.3] write content here %write content here 
-\end{itemize}
-\end{minipage}\\
-\hline
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textcolor{blue}{2007 Tocopilla earthquake} & %content here
+\begin{description}[itemsep=-1.5mm]
+  \item [General]
+  \item [1] ruptured the deeper part of the seismogenic interface (30–50 km) and did not reach the surface 
+  \item [2] initiated at the hypocentre and was arrested $\sim$150 km south, beneath the Mejillones Peninsula
+  \item [mainshock]
+  \item [1]slip concentrated in two main asperities, consistent with previous inversions of seismological data.
+  \item [postseismic deformation]
+  \item [1]small but still significant post-seismic slip occurred within the first 10 d after the main shock
+  \item [2]mostly concentrated at the southern end of the rupture.
+  \item [3]represents $\sim$12–19 per cent of the coseismic deformation, of which $\sim$30–55 per cent has been released aseismically.
+  \item [slip]
+  \item [1]propagated towards relatively shallow depths at its southern extremity, under the Mejillones Peninsula.
+  \item [Mejillones Peninsula]
+  \item [1]identified as an important structural barrier between two segments of the Peru--Chile subduction zone
+  
+\end{description}\\
 
-\end{tabularx}
-\end{table}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}
-\caption{Title}
-\centering
-\begin{tabularx}{\textwidth}[t]{XX}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\arrayrulecolor{green}\hline
-\textbf{\textcolor{myGreen}{0 Summary}} & \\
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \hline
-\begin{description}
-  \item [Personal idea]
-  \item write content here %write content here 
-\end{description}
-&
-\begin{minipage}[t]{\linewidth}%
-\begin{itemize}
-\item[1.1] write content here %write content here 
-\item[1.2] write content here %write content here 
-\item[1.3] write content here %write content here 
-\end{itemize}
-\end{minipage}\\
-\arrayrulecolor{black}\hline
-\begin{description}
-  \item [Personal idea]
-  \item write content here %write content here 
-\end{description}
-&
-\begin{minipage}[t]{\linewidth}%
-\begin{itemize}
-\item[1.1] write content here %write content here 
-\item[1.2] write content here %write content here 
-\item[1.3] write content here %write content here 
-\end{itemize}
-\end{minipage}\\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\arrayrulecolor{green}\hline
-\textbf{\textcolor{myGreen}{1 Research Objective}} \\
 \hline
-\begin{description}
-  \item [Personal idea]
-  \item write content here %write content here 
-\end{description}
-&
-\begin{minipage}[t]{\linewidth}%
-\begin{itemize}
-\item[1.1] write content here %write content here 
-\item[1.2] write content here %write content here 
-\item[1.3] write content here %write content here 
-\end{itemize}
-\end{minipage}\\
+\multicolumn{2}{l}{\textbf{1 Research Objective}} \\
 \hline
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\arrayrulecolor{green}\hline
-\textbf{\textcolor{myGreen}{2 Background and Problems}} \\
 \hline
-\begin{description}
-  \item [Personal idea]
-  \item write content here %write content here 
-\end{description}
-&
-\begin{minipage}[t]{\linewidth}%
-\begin{itemize}
-\item[1.1] write content here %write content here 
-\item[1.2] write content here %write content here 
-\item[1.3] write content here %write content here 
-\end{itemize}
-\end{minipage}\\
+N/A & N/A  \\ %content here
+\textcolor{blue}{N/A} & \textcolor{blue}{All titles have been changed accordingly as follows:}\\
+& 3.1 Laboratory Flat Bed Wave Flume Test , \\
+& 3.2 Field Scale Flat Bed Test ,\\%content here
+\hline    
+N/A & N/A  \\%content here
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \hline
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\arrayrulecolor{green}\hline
-\textbf{\textcolor{myGreen}{3 Method}} \\
 \hline
-\begin{description}
-  \item [Personal idea]
-  \item write content here %write content here 
-\end{description}
-&
-\begin{minipage}[t]{\linewidth}%
-\begin{itemize}
-\item[1.1] write content here %write content here 
-\item[1.2] write content here %write content here 
-\item[1.3] write content here %write content here 
-\end{itemize}
-\end{minipage}\\
+\multicolumn{2}{l}{\textbf{2 Background and Problems}} \\
 \hline
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\multicolumn{2}{c}{%
-\textbf{\textcolor{red}{Conclusion}}} \\
 \hline
-\begin{description}
-  \item [Personal idea]
-  \item write content here %write content here 
-\end{description}
-&
-\begin{minipage}[t]{\linewidth}%
-\begin{itemize}
-\item[1.1] write content here %write content here 
-\item[1.2] write content here %write content here 
-\item[1.3] write content here %write content here 
-\end{itemize}
-\end{minipage}\\
+N/A & N/A  \\ %content here
+\textcolor{blue}{N/A} & \textcolor{blue}{All titles have been changed accordingly as follows:}\\
+& 3.1 Laboratory Flat Bed Wave Flume Test , \\
+& 3.2 Field Scale Flat Bed Test ,\\%content here
+\hline    
+N/A & N/A  \\%content here
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \hline
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\end{tabularx}
-\end{table}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\hline
+\multicolumn{2}{l}{\textbf{3 Method}} \\
+\hline
+\hline
+N/A & N/A  \\ %content here
+\textcolor{blue}{N/A} & \textcolor{blue}{All titles have been changed accordingly as follows:}\\
+& 3.1 Laboratory Flat Bed Wave Flume Test , \\
+& 3.2 Field Scale Flat Bed Test ,\\%content here
+\hline    
+N/A & N/A  \\%content here
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\hline
+\hline
+\multicolumn{2}{l}{\textbf{4 Conclusion}} \\
+\hline
+\hline
+N/A & N/A  \\ %content here
+\textcolor{blue}{N/A} & \textcolor{blue}{All titles have been changed accordingly as follows:}\\
+& 3.1 Laboratory Flat Bed Wave Flume Test , \\
+& 3.2 Field Scale Flat Bed Test ,\\%content here
+\hline    
+N/A & N/A  \\%content here
+\hline 
+\hline 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{longtable}
+%\end{center}
 \end{document}

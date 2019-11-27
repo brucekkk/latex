@@ -1,63 +1,55 @@
 \documentclass[12pt]{article}
+\usepackage[utf8x]{inputenc} 
 \usepackage[top=0.5cm,bottom=1.4cm,left=1.0cm,right=0.2cm]{geometry}
 \usepackage{mathptmx}%
 \usepackage{longtable}
+\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
 \usepackage{array,ragged2e}
 \usepackage[table]{xcolor}
 \usepackage{caption}
+\usepackage{tocloft}
 \usepackage{array}
+\usepackage{graphicx}
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \usepackage{enumitem}
 \setlist[enumerate]{itemsep=0mm}
+\bibliographystyle{plain}
 \begin{document}
+\setcounter{secnumdepth}{5}  
+\setcounter{tocdepth}{5}
+\newpage
+\addcontentsline{toc}{section}{Table of Contents}
+\tableofcontents
+
+\newpage
+\addcontentsline{toc}{section}{List of Tables}
 \listoftables
-\clearpage
-\begin{longtable}{ C{3cm} | L{16cm} }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\caption{Asperities and barriers on the seismogenic zone in North Chile: state-of-the-art after the 2007 Mw 7.7 Tocopilla earthquake inferred by GPS and InSAR data}\\ 
+\newpage
+\section{First}
+\phantomsection
+\addtocounter{subsection}{1}
+\addcontentsline{toc}{subsection}{\protect\numberline{\thesubsection} xxx}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{longtable}{ L{3cm} | L{15cm} }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\caption{XXX}\\ 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \hline
 \hline
 \multicolumn{2}{l}{\textbf{0 Summary}} \\
 \hline
 \hline 
-%\textbf{\textit{Aspects}} & \textbf{\textit{Content}} \\
-%\hline 
-%\hline
-\textit{keyword} & 2007 Tocopilla earthquake\\&111\\ %keyword here
-
-\textcolor{blue}{2007 Tocopilla earthquake} & %content here
-\begin{description}[itemsep=-1.5mm]
-  \item [General]
-  \item [1] ruptured the deeper part of the seismogenic interface (30–50 km) and did not reach the surface 
-  \item [2] initiated at the hypocentre and was arrested $\sim$150 km south, beneath the Mejillones Peninsula
-  \item [mainshock]
-  \item [1]slip concentrated in two main asperities, consistent with previous inversions of seismological data.
-  \item [postseismic deformation]
-  \item [1]small but still significant post-seismic slip occurred within the first 10 d after the main shock
-  \item [2]mostly concentrated at the southern end of the rupture.
-  \item [3]represents $\sim$12–19 per cent of the coseismic deformation, of which $\sim$30–55 per cent has been released aseismically.
-  \item [slip]
-  \item [1]propagated towards relatively shallow depths at its southern extremity, under the Mejillones Peninsula.
-  \item [Mejillones Peninsula]
-  \item [1]identified as an important structural barrier between two segments of the Peru--Chile subduction zone
-  
-\end{description}\\
-
- %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+N/A&N/A\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \hline
 \hline
 \multicolumn{2}{l}{\textbf{1 Research Objective}} \\
 \hline
 \hline
-N/A & N/A  \\ %content here
-\textcolor{blue}{N/A} & \textcolor{blue}{All titles have been changed accordingly as follows:}\\
-& 3.1 Laboratory Flat Bed Wave Flume Test , \\
-& 3.2 Field Scale Flat Bed Test ,\\%content here
-\hline    
-N/A & N/A  \\%content here
+N/A&N/A\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \hline
 \hline
@@ -65,11 +57,6 @@ N/A & N/A  \\%content here
 \hline
 \hline
 N/A & N/A  \\ %content here
-\textcolor{blue}{N/A} & \textcolor{blue}{All titles have been changed accordingly as follows:}\\
-& 3.1 Laboratory Flat Bed Wave Flume Test , \\
-& 3.2 Field Scale Flat Bed Test ,\\%content here
-\hline    
-N/A & N/A  \\%content here
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \hline
 \hline
@@ -77,11 +64,6 @@ N/A & N/A  \\%content here
 \hline
 \hline
 N/A & N/A  \\ %content here
-\textcolor{blue}{N/A} & \textcolor{blue}{All titles have been changed accordingly as follows:}\\
-& 3.1 Laboratory Flat Bed Wave Flume Test , \\
-& 3.2 Field Scale Flat Bed Test ,\\%content here
-\hline    
-N/A & N/A  \\%content here
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \hline
 \hline
@@ -89,14 +71,11 @@ N/A & N/A  \\%content here
 \hline
 \hline
 N/A & N/A  \\ %content here
-\textcolor{blue}{N/A} & \textcolor{blue}{All titles have been changed accordingly as follows:}\\
-& 3.1 Laboratory Flat Bed Wave Flume Test , \\
-& 3.2 Field Scale Flat Bed Test ,\\%content here
-\hline    
-N/A & N/A  \\%content here
 \hline 
 \hline 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{longtable}
-%\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\bibliography{info}
 \end{document}
